@@ -28,7 +28,7 @@ const TopButtons = () => {
     return (
     <div className='flex items-center justify-around my-6'>
         {cities.map((city) => (
-            <button className='text-white text-xl font-medium font-sans' key={city.id}>{city.title}</button>
+            <button className='text-white text-xl font-medium' key={city.id}>{city.title}</button>
         ))}
     </div>
   )
