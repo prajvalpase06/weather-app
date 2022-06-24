@@ -1,0 +1,177 @@
+import './App.css';
+import UilReact from '@iconscout/react-unicons/icons/uil-react'
+import TopButtons from './components/TopButtons';
+import Inputs from './components/Inputs';
+import TimeAndLocation from './components/TimeAndLocation';
+import TemperatureAndDetails from './components/TemperatureAndDetails';
+
+function App() {
+  return (
+    <div className="mx-auto max-w-screen-lg mt-4 py-5 px-32 bg-gradient-to-br from-cyan-700 to-blue-700 h-fit shadow-xl shadow-gray-400">
+      <TopButtons />
+      <Inputs />
+      
+      <TimeAndLocation />
+      <TemperatureAndDetails />
+    </div>
+  );
+}
+
+export default App; 
+
+
+//inputs
+
+import React from 'react'
+import { UilSearch, UilLocationPoint } from '@iconscout/react-unicons'
+
+
+const Inputs = () => {
+  return (
+    <div className='flex justify-center my-6 flex-row'>
+        <div className='flex flex-row items-center justify-center w-3/4 space-x-4'>
+            <input 
+            type="text" 
+            className='text-xl p-2 w-full shadow-xl focus:outline-none capitalize' 
+            placeholder='Search...'    
+            />
+            <UilSearch size={25} className="text-white cursor-pointer transition ease-out hover:scale-125"/>
+            <UilLocationPoint size={25} className="text-white cursor-pointer transition ease-out hover:scale-125"/>
+
+        </div>
+
+        <div className='flex flex-row items-center justify-center w-1/4'>
+            <button name='metric' className='text-xl text-white'> °C </button>
+            <p className='text-xl text-white mx-1'> | </p>
+            <button name='imperial' className='text-xl text-white'>°F</button>
+        </div>
+
+    </div>
+  )
+}
+
+export default Inputs
+
+
+
+// FULL WIDTH 
+TEMP AND DETAILS 
+import React from 'react'
+import {
+  UilArrowUp,
+  UilArrowDown,
+  UilTemperature,
+  UilTear,
+  UilWind,
+  UilSun,
+  UilSunset,
+} from "@iconscout/react-unicons";
+
+const TemperatureAndDetails = () => {
+  return (
+    <div>
+        <div className='items-center justify-center text-xl py-6 flex text-cyan-300'>
+            <p>Clear</p>
+        </div>
+        <div className='flex flex-row items-center justify-between text-white py-3'>
+            <img src="http://openweathermap.org/img/wn/10d@2x.png" className='w-20'/>
+            <p className='text-5xl'>34°</p>
+            <div className='flex-col flex space-y-2'>
+                <div className='flex items-center justify-center'>
+                    <UilTemperature size={18} className="mr-1"/>
+                    Real fell: 
+                    <span className='ml-1 font-medium'>32°</span>
+                </div>
+                <div className='flex items-center justify-center'>
+                    <UilTear size={18} className="mr-1"/>
+                    Humidity: 
+                    <span className='ml-1 font-medium'>41%</span>
+                </div>
+                <div className='flex items-center justify-center'>
+                    <UilWind size={18} className="mr-1"/>
+                    Wind: 
+                    <span className='ml-1 font-medium'>4 km/hr</span>
+                </div>
+            </div>
+        </div>
+
+        <div className='flex flex-row items-center justify-center space-x-2 text-white text-sm py-3'>
+            <UilSun />
+            <p className='font-light'>Rise: <span className='font-medium ml-1'>06:00 AM</span></p>
+            <p className='font-light text-lg'> | </p>
+            <UilSunset />
+            <p className='font-light'>Set: <span className='font-medium ml-1'>06:00 AM</span></p>
+            <p className='font-light text-lg'> | </p>
+            <UilArrowUp />
+            <p className='font-light'>High: <span className='font-medium ml-1'>45°</span></p>
+            <p className='font-light text-lg'> | </p>
+            <UilArrowDown />
+            <p className='font-light'>Low: <span className='font-medium ml-1'>22°</span></p>
+        </div>
+
+    </div>
+  )
+}
+
+export default TemperatureAndDetails
+
+
+// INPUTS 
+import React from 'react'
+import { UilSearch, UilLocationPoint } from '@iconscout/react-unicons'
+
+
+const Inputs = () => {
+  return (
+  <div>
+    <div className='flex justify-center my-6 flex-row'>
+        <div className='flex flex-row items-center justify-center w-1/2 space-x-4'>
+            <input 
+            type="text" 
+            className='text-xl p-2 w-full shadow-xl focus:outline-none capitalize' 
+            placeholder='Search...'    
+            />
+            <UilSearch size={25} className="text-white cursor-pointer transition ease-out hover:scale-125"/>
+            <UilLocationPoint size={25} className="text-white cursor-pointer transition ease-out hover:scale-125"/>
+
+        </div>
+
+        
+
+    </div>
+    <div className='flex flex-row items-center justify-center'>
+            <button name='metric' className='text-xl text-white'> °C </button>
+            <p className='text-xl text-white mx-1'> | </p>
+            <button name='imperial' className='text-xl text-white'>°F</button>
+        </div>
+    </div>
+  )
+}
+
+export default Inputs
+
+// APP.JS
+import './App.css';
+import UilReact from '@iconscout/react-unicons/icons/uil-react'
+import TopButtons from './components/TopButtons';
+import Inputs from './components/Inputs';
+import TimeAndLocation from './components/TimeAndLocation';
+import TemperatureAndDetails from './components/TemperatureAndDetails';
+import Forecast from './components/Forecast';
+
+function App() {
+  return (
+    <div className="mx-auto py-5 px-32 bg-gradient-to-br from-cyan-700 to-blue-700 h-fit shadow-xl shadow-gray-400">
+      <TopButtons />
+      <Inputs />
+      
+      <TimeAndLocation />
+      <TemperatureAndDetails />
+	<Forecast title= "hourly Forecast" />
+      <Forecast title= "daily Forecast" />
+    </div>
+  );
+}
+export default App; 
+export default App; 
+
