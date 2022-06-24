@@ -27,11 +27,11 @@ const TemperatureAndDetails = ({ weather: {
 } }) => {
   return (
     <div>
-        <div className='items-center justify-center text-xl py-6 flex text-cyan-300'>
+        <div className='items-center justify-center text-2xl py-6 flex text-cyan-300'>
             <p>{details}</p>
         </div>
         <div className='flex flex-row items-center justify-between text-white py-3'>
-            <img src={iconURL(icon)} className='w   -20'/>
+            <img src={iconURL(icon)} className=''/>
             <p className='text-5xl'>{`${temp.toFixed()}°`}</p>
             <div className='flex-col flex space-y-2'>
                 <div className='flex items-center justify-center'>
